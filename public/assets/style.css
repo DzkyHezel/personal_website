@@ -21,6 +21,42 @@ body{
     }
 }
 
+/* LOADER */
+/* src : https://css-loaders.com/circle/ #3 */
+#custom-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    width: 65px;
+    height: 30px;
+    position: relative;
+}
+
+.loader:before {
+    content: "";
+    position: absolute;
+    border-radius: 50px;
+    box-shadow: 0 0 0 3px inset #514b82; 
+    animation: bounceLoader 0.75s infinite alternate ease-in-out;
+}
+
+@keyframes bounceLoader {
+    0% { inset: 0 35px 0 0; }
+    50% { inset: 0 0 0 0; }
+    100% { inset: 0 0 0 35px; }
+}
+/* LOADER END */
+
 /* fonts start */
 .shizuru-font{
     font-family: "Shizuru", serif;
@@ -212,6 +248,13 @@ body{
     .header-brand{
         margin: 5px 0 0 0 ;
         font-size: 22px !important;
+    }
+}
+@media only screen and (max-width: 375px) {
+    
+    .header-brand{
+        margin: 5px 0 0 0 ;
+        font-size: 19px !important;
     }
 }
 /* HEADER END */

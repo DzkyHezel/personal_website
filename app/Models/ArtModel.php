@@ -42,4 +42,9 @@ class ArtModel extends Model
         // echo $this->db->getLastQuery();
         // die();
     }
+
+    public function countAll(){
+        $builder = $this->db->table($this->table);
+        return $builder->countAllResults();
+    }
 }

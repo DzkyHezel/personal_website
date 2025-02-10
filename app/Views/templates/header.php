@@ -40,10 +40,13 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.5/themes/odometer-theme-default.css"
         integrity="sha512-kMPqFnKueEwgQFzXLEEl671aHhQqrZLS5IP3HzqdfozaST/EgU+/wkM07JCmXFAt9GO810I//8DBonsJUzGQsQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer"/>
 </head>
 
 <body>
+    <div id="custom-loader">
+        <div class="loader"></div>
+    </div>
     <section class="main-contents">
         <!-- header desktop -->
         <div class="container-fluid d-flex justify-content-between mb-3 p-0">
@@ -96,18 +99,10 @@
                 padding-left: 20px;
             }
         }
-
-        /* .navbar{
-        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
-        -webkit-mask-size: 100% 50%;
-        -webkit-mask-repeat: no-repeat;
-        -webkit-mask-position: top;
-    } */
         </style>
 
         <script>
         let btnToTop = document.getElementById("btn-backtoTop");
-
         window.onscroll = function() {
             if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
                 btnToTop.style.display = "block";
@@ -121,4 +116,11 @@
                 behavior: 'smooth'
             });
         }
+
+        // loader chatgpt
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.getElementById("custom-loader").style.display = "none";
+            }, 1000); 
+        });
         </script>

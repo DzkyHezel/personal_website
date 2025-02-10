@@ -15,6 +15,7 @@ class Home extends BaseController
     public function index()
     {
         $data['text'] = 'Hai';
+        $data['all_amnt'] = $this->mdl->countAll();
 
         echo view('templates/header', $data);
         echo view('templates/sticky-links', $data);

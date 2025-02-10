@@ -18,19 +18,26 @@
 
     <hr style="border: 8px solid rgb(203, 90, 167); border-radius: 20px;"> <!-- border -->
 
-    <div class="mt-4">
-        <h1 class="uni-title fs-1 mt-5 wow fadeInUp" data-wow-delay="1s">Get to know me better!</h1>
-        <p class="fs-5 wow fadeInUp" data-wow-delay="1s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam feugiat, quam sit amet dapibus
-            tristique, urna
-            ipsum pellentesque felis, sagittis mollis nulla elit eu nibh. Integer ac turpis et ligula mattis convallis
-            at vel nunc. Praesent lacinia arcu nisl, in ullamcorper purus suscipit ut. Vivamus et dui ex. Phasellus eget
-            feugiat leo. Nam laoreet, justo id sollicitudin bibendum, leo diam scelerisque nulla, ut convallis dolor
-            orci et elit. Sed erat elit, convallis ut ultricies ut, dapibus eu est. Integer at nibh ut nisl feugiat
-            varius.</p>
+    <div class="container mt-4">
+        <h1 class="uni-title fs-1 mt-5 mb-4 wow fadeInUp" data-wow-delay="1s">Who's behind the canvas?'</h1>
+        <p class="fs-5 wow fadeIn" data-wow-delay="2s">
+            <i>(Spoiler: It's me, duh)</i> <br><br>
+            <span class="fs-2">Hi, dears! I'm Hezel 👋</span><br><br>
+            <span class="purple fs-3 wow fadeIn fw-bold" data-wow-delay="1s">What do I do?</span><br>
+            I create art, posted it, then gone for months. <br><br>
+            Just kidding. <br>
+            <ul class="wow fadeIn fs-5" data-wow-delay="2s">
+                <li>I do digital art. What about traditional art? That's my love and hate relationship.</li><br>
+                <li>Don't ask me about my artstyle. I love experimenting with lots of artstyle that I think are fun
+                    to try! Dang it, let's just say I'm currently having an artistic identity crisis.</li><br>
+                <li>Loves cats <i>(because what kind of artist doesn't?)</i></li>
+            </ul>
+            <span class="wow fadeIn fs-5" data-wow-delay="2s">Dig deeper into my artistic madness by clicking <i>"More about me"!</i></span>
+        </p>
         <div class="d-grid gap-2 justify-content-end btn-desktop wow fadeInUp" data-wow-delay="1s">
             <div class="btn btn-primary btn-lg my-2" onclick="window.location.href='<?= base_url('about-dzkyhzl')?>'">
                 More about me <i class="ri-arrow-right-s-fill"></i>
-                </div>
+            </div>
         </div>
         <div class="d-grid gap-2 justify-content-center btn-mobile wow fadeInUp" data-wow-delay="1s">
             <div class="btn btn-primary btn-lg my-2" onclick="window.location.href='<?= base_url('about-dzkyhzl')?>'">
@@ -50,7 +57,7 @@
                 <div class="col-sm my-3 wow fadeInUp" data-wow-delay="1s">
                     <i class="ri-palette-line fs-1"></i>
                     <h4 class="uni-title light-purple">Artworks <br> Completed</h4>
-                    <p class="fs-2">12345</p>
+                    <p class="fs-2">± <?= $all_amnt ?></p>
                 </div>
             </div>
         </div>
@@ -82,7 +89,8 @@
                 </div>
             </div>
         </div>
-        <h4 class="uni-title light-purple mb-3 mt-2 wow fadeInUp" data-wow-delay="1s">A glimpse into my favorite art pieces ~ ♡</h4>
+        <h4 class="uni-title light-purple mb-3 mt-2 wow fadeInUp" data-wow-delay="1s">A glimpse into my favorite art
+            pieces ~ ♡</h4>
     </div>
 
     <!-- carousel start -->
@@ -119,11 +127,13 @@
         </div>
         <div class="d-grid gap-2 justify-content-end btn-desktop mt-3 wow fadeInUp" data-wow-delay="1s">
             <div class="btn btn-primary btn-lg my-2"
-                onclick="window.location.href='<?= base_url('dzkyhzl-artworks')?>'">More Artworks <i class="ri-arrow-right-s-fill"></i></div>
+                onclick="window.location.href='<?= base_url('dzkyhzl-artworks')?>'">More Artworks <i
+                    class="ri-arrow-right-s-fill"></i></div>
         </div>
         <div class="d-grid gap-2 justify-content-center btn-mobile mt-3 wow fadeInUp" data-wow-delay="1s">
             <div class="btn btn-primary btn-lg my-2"
-                onclick="window.location.href='<?= base_url('dzkyhzl-artworks')?>'">More Artworks <i class="ri-arrow-right-s-fill"></i></div>
+                onclick="window.location.href='<?= base_url('dzkyhzl-artworks')?>'">More Artworks <i
+                    class="ri-arrow-right-s-fill"></i></div>
         </div>
     </div>
     <!-- carousel end -->
