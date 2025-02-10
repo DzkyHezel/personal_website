@@ -28,9 +28,18 @@ class ArtModel extends Model
     public function sortByYear($year){
         $builder = $this->db->table($this->table);
         $builder->where('year', $year);
+        $builder->orderBy('created_at', 'DESC');
         $query = $builder->get();
         //  echo $this->db->getLastQuery();
         // die();
         return $query->getResult();
+    }
+
+    public function countSort($year){
+        $builder = $this->db->table($this->table);
+        $builder->where('year', $year);
+        return $builder->countAllResults();
+        // echo $this->db->getLastQuery();
+        // die();
     }
 }

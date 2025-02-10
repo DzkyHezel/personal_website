@@ -35,28 +35,28 @@
     <div class="mt-4">
         <h1 class="uni-title fs-1 mt-5 wow fadeInUp" data-wow-delay="1s">All Artworks</h1>
 
-        <p class="fs-5">Sort By Year</p>
+        <p class="fs-5 wow fadeInUp" data-wow-delay="1s">Sort By Year</p>
         <div class="d-flex  flex-wrap justify-content-start gap-2">
             <?php 
             if (!empty($artworks)) { 
                 $yr = ['2025', '2024', '2023', '2022', '2021','2020'];    
             ?>
 
-            <button class="btn <?= is_null($active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4"
+            <button class="wow fadeInUp btn <?= is_null($active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-5" data-wow-delay="1s"
                 onclick="sortByYear(null)">
                 All
             </button>
-            <button class="btn <?= ($yr[0] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4"
+            <button class="wow fadeInUp btn <?= ($yr[0] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4" data-wow-delay="1s"
                 onclick="sortByYear(2025)"> 2025 </button>
-            <button class="btn <?= ($yr[1] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4"
+            <button class="wow fadeInUp btn <?= ($yr[1] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4" data-wow-delay="1s"
                 onclick="sortByYear(2024)"> 2024 </button>
-            <button class="btn <?= ($yr[2] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4"
+            <button class="wow fadeInUp btn <?= ($yr[2] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4" data-wow-delay="1s"
                 onclick="sortByYear(2023)"> 2023 </button>
-            <button class="btn <?= ($yr[3] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4"
+            <button class="wow fadeInUp btn <?= ($yr[3] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4" data-wow-delay="1s"
                 onclick="sortByYear(2022)"> 2022 </button>
-            <button class="btn <?= ($yr[4] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4"
+            <button class="wow fadeInUp btn <?= ($yr[4] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4" data-wow-delay="1s"
                 onclick="sortByYear(2021)"> 2021 </button>
-            <button class="btn <?= ($yr[5] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4"
+            <button class="wow fadeInUp btn <?= ($yr[5] == $active_year) ? 'btn-primary' : 'btn-outline-primary' ?> px-4" data-wow-delay="1s"
                 onclick="sortByYear(2020)"> 2020 </button>
 
             <?php } else { ?>
@@ -65,7 +65,7 @@
         </div>
 
         <!-- art filter 2025 -->
-        <?php if (empty($filter_res)) : ?>
+        <?php if ($filter_res == null) : ?>
         <div class="container mt-4">
             <h4 class="uni-title light-purple wow fadeInUp" data-wow-delay="1s">2025</h4>
             <div class="row mt-4">
@@ -234,8 +234,10 @@
         </div>
         <?php else : ?>
         <div class="container mt-4">
-            <h4 class="uni-title light-purple wow fadeInUp" data-wow-delay="1s"><?= $active_year ?></h4>
-            <div class="row mt-4">
+            <div class="d-flex flex-row justify-content-center">
+                <h4 class="uni-title light-purple wow fadeInUp" data-wow-delay="1s"><?= $active_year ?> </h4>&nbsp; <p class="wow fadeInUp" data-wow-delay="1s">- Showing total of <?= $count_art ?> data.</p>
+            </div>
+            <div class="row mt-2">
                 <?php 
             $filter = array_filter($filter_res, function ($rs) {
                 return $rs->year;

@@ -43,13 +43,16 @@ class Home extends BaseController
         $year = $this->request->getPost('filter_by_year');
         if ($year) {
             $sort = $this->mdl->sortByYear($year);
+            $data['count_art'] = $this->mdl->countSort($year);
             $data['filter_res'] = $sort;
             $data['active_year'] = $year;
         } else {
-            $sort = $allArt;
-            $data['filter_res'] = $sort;
+            $data['count_art'] = $this->mdl->countSort($year);
+            $data['filter_res'] = null;
             $data['active_year'] = null;
         }
+        // print_r($data['filter_res']);
+        // die();
 
         echo view('templates/header', $data);
         echo view('templates/sticky-links', $data);
