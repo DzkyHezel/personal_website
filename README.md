@@ -1,7 +1,3 @@
-Berikut isi README yang menarik dan tetap sesuai dengan gaya unik yang sudah kamu pakai di websitemu:  
-
----
-
 # 🎨 Welcome to Hezel's Artistic Chaos!  
 
 **Note: I have no idea what I'm doing, but it looks cool.**  
@@ -27,5 +23,3 @@ I create art. I experiment. I suffer. I repeat.
 <a href="https://twitter.com/dzkyhezel">
   <img src="https://img.icons8.com/color/48/twitter.png" alt="Twitter">
 </a>
-
-For those brave enough to dig deeper into my *madness*, click **More about me** on my website. 🚀
